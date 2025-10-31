@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import logo from "@/assets/zelij-logo.jpeg";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -13,7 +14,7 @@ export function Hero() {
     <section className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="container mx-auto text-center">
         <div className="mb-8 flex justify-center">
-          <div className="w-24 h-24 bg-foreground rounded-full animate-pulse" />
+          <img src={logo} alt="Zelij Labs Logo" className="w-24 h-24 rounded-full animate-pulse" />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-midnight-light to-accent bg-clip-text text-transparent">

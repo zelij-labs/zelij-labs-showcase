@@ -1,10 +1,12 @@
+import logo from "@/assets/zelij-logo.jpeg";
+
 export function Footer() {
   return (
     <footer className="border-t border-border py-12 px-6">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-foreground rounded-full" />
+            <img src={logo} alt="Zelij Labs Logo" className="w-6 h-6 rounded-full" />
             <span className="text-sm font-semibold">zelij labs</span>
           </div>
           

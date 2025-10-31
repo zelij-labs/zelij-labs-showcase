@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/zelij-logo.jpeg";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,7 +33,7 @@ export function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-foreground rounded-full" />
+            <img src={logo} alt="Zelij Labs Logo" className="w-8 h-8 rounded-full" />
             <span className="text-xl font-semibold">zelij labs</span>
           </div>
 
