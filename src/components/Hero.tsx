@@ -17,7 +17,7 @@ export function Hero() {
           <img src={logo} alt="Zelij Labs Logo" className="w-24 h-24 rounded-full animate-pulse" />
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-midnight-light to-accent bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 font-kufic text-foreground">
           Zelij Labs
         </h1>
         
