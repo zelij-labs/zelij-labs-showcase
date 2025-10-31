@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'kufic': ['Reem Kufi', 'sans-serif'],
+        'display': ['Space Grotesk', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

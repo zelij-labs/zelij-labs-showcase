@@ -13,13 +13,12 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="container mx-auto text-center">
-        <div className="mb-8 flex justify-center">
-          <img src={logo} alt="Zelij Labs Logo" className="w-24 h-24 rounded-full animate-pulse" />
+        <div className="mb-8 flex justify-center items-center gap-6">
+          <img src={logo} alt="Zelij Labs Logo" className="w-20 h-20 md:w-24 md:h-24 rounded-full" />
+          <h1 className="text-5xl md:text-7xl font-bold font-display text-foreground">
+            Zelij Labs
+          </h1>
         </div>
-        
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 font-kufic text-foreground">
-          Zelij Labs
-        </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Crafting elegant technical solutions for complex challenges
