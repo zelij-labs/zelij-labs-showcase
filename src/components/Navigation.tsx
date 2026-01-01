@@ -42,7 +42,7 @@ export function Navigation() {
               alt="Zelij Labs Logo" 
               className="w-8 h-8" 
             />
-            <span className="text-xl font-semibold">zelij labs</span>
+            <span className="text-xl font-semibold font-montserrat uppercase tracking-wide">Zelij Labs</span>
           </div>
 
           {/* Desktop Navigation */}
