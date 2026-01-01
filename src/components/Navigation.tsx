@@ -2,11 +2,15 @@ import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/zelij-logo.jpeg";
+import { useTheme } from "./ThemeProvider";
+import logoDark from "@/assets/logo-dark.png";
+import logoLight from "@/assets/logo-light.png";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
+  const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +37,11 @@ export function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <img src={logo} alt="Zelij Labs Logo" className="w-8 h-8 rounded-full" />
+            <img 
+              src={isDark ? logoDark : logoLight} 
+              alt="Zelij Labs Logo" 
+              className="w-8 h-8" 
+            />
             <span className="text-xl font-semibold">zelij labs</span>
           </div>
 
