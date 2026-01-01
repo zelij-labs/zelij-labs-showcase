@@ -30,11 +30,11 @@ export function Hero() {
         </div>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Crafting elegant technical solutions for complex challenges
+          Engineering Intelligence into the Modern Stack.
         </p>
         
         <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
-          We build scalable software, architect cloud infrastructure, and deliver strategic technology consulting
+          We build autonomous AI agents, high-frequency data architectures, and the cloud infrastructure that powers them. Precision-crafted software for the frontier of automation.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -51,7 +51,7 @@ export function Hero() {
             variant="outline"
             onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
           >
-            Explore Services
+            Core Specialization
           </Button>
         </div>
       </div>
