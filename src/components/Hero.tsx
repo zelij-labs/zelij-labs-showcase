@@ -24,7 +24,7 @@ export function Hero() {
             alt="Zelij Labs Logo" 
             className="w-20 h-20 md:w-24 md:h-24" 
           />
-          <h1 className="text-5xl md:text-7xl font-bold font-display text-foreground">
+          <h1 className="text-5xl md:text-7xl font-semibold font-montserrat text-foreground uppercase tracking-wide">
             Zelij Labs
           </h1>
         </div>
