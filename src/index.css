@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 10%;
 
-    --primary: 220 80% 50%;
+    --primary: 220 50% 25%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 15% 90%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 220 15% 95%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 220 80% 60%;
+    --accent: 220 50% 25%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +34,7 @@ All colors MUST be HSL.
 
     --border: 220 15% 88%;
     --input: 220 15% 88%;
-    --ring: 220 80% 50%;
+    --ring: 220 50% 30%;
 
     --radius: 0.5rem;
 
@@ -53,8 +53,8 @@ All colors MUST be HSL.
     --popover: 0 0% 3%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 220 85% 60%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 220 55% 35%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 220 15% 12%;
     --secondary-foreground: 0 0% 98%;
@@ -62,7 +62,7 @@ All colors MUST be HSL.
     --muted: 220 15% 10%;
     --muted-foreground: 220 10% 65%;
 
-    --accent: 220 85% 55%;
+    --accent: 220 55% 35%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 50%;
@@ -70,7 +70,7 @@ All colors MUST be HSL.
 
     --border: 220 20% 15%;
     --input: 220 20% 15%;
-    --ring: 220 85% 60%;
+    --ring: 220 55% 40%;
 
     /* Midnight blue accents for dark mode */
     --midnight: 220 90% 65%;
