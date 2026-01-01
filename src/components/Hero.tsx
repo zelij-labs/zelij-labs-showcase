@@ -1,8 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import logo from "@/assets/zelij-logo.jpeg";
+import { useTheme } from "./ThemeProvider";
+import logoDark from "@/assets/logo-dark.png";
+import logoLight from "@/assets/logo-light.png";
 
 export function Hero() {
+  const { theme } = useTheme();
+  const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -14,7 +19,11 @@ export function Hero() {
     <section className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="container mx-auto text-center">
         <div className="mb-8 flex justify-center items-center gap-6">
-          <img src={logo} alt="Zelij Labs Logo" className="w-20 h-20 md:w-24 md:h-24 rounded-full" />
+          <img 
+            src={isDark ? logoDark : logoLight} 
+            alt="Zelij Labs Logo" 
+            className="w-20 h-20 md:w-24 md:h-24" 
+          />
           <h1 className="text-5xl md:text-7xl font-bold font-display text-foreground">
             Zelij Labs
           </h1>
