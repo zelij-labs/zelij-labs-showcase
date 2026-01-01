@@ -17,30 +17,30 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 10%;
 
-    --primary: 220 50% 25%;
+    --primary: 240 77% 29%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 90%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 240 15% 90%;
+    --secondary-foreground: 240 20% 10%;
 
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 240 15% 95%;
+    --muted-foreground: 240 10% 45%;
 
-    --accent: 220 50% 25%;
+    --accent: 240 77% 29%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 50% 30%;
+    --border: 240 15% 88%;
+    --input: 240 15% 88%;
+    --ring: 240 77% 35%;
 
     --radius: 0.5rem;
 
-    /* Midnight blue accents for light mode */
-    --midnight: 220 80% 20%;
-    --midnight-light: 220 70% 40%;
+    /* Deep indigo accents for light mode */
+    --midnight: 240 77% 29%;
+    --midnight-light: 240 70% 45%;
   }
 
   .dark {
@@ -53,28 +53,28 @@ All colors MUST be HSL.
     --popover: 0 0% 3%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 220 55% 35%;
+    --primary: 240 70% 50%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 220 15% 12%;
+    --secondary: 240 15% 12%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 15% 10%;
-    --muted-foreground: 220 10% 65%;
+    --muted: 240 15% 10%;
+    --muted-foreground: 240 10% 65%;
 
-    --accent: 220 55% 35%;
+    --accent: 240 70% 50%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 20% 15%;
-    --input: 220 20% 15%;
-    --ring: 220 55% 40%;
+    --border: 240 20% 15%;
+    --input: 240 20% 15%;
+    --ring: 240 70% 55%;
 
-    /* Midnight blue accents for dark mode */
-    --midnight: 220 90% 65%;
-    --midnight-light: 220 80% 75%;
+    /* Deep indigo accents for dark mode */
+    --midnight: 240 80% 65%;
+    --midnight-light: 240 75% 75%;
   }
 }
 
