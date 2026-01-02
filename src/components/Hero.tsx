@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import logoDark from "@/assets/logo-dark.png";
 import logoLight from "@/assets/logo-light.png";
-import heroBg from "@/assets/hero-circuit-minimal.jpg";
+import heroBg from "@/assets/hero-chicago-dark.jpg";
 
 export function Hero() {
   const { theme } = useTheme();
