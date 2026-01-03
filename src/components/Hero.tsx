@@ -37,10 +37,11 @@ export function Hero() {
       />
       {/* Digital Circuit Pattern Overlay with Parallax */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-screen"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
         style={{ 
           backgroundImage: `url(${circuitOverlay})`,
           transform: `translateY(${scrollY * 0.15}px)`,
+          mixBlendMode: 'lighten',
         }}
       />
       {/* Gradient Mesh Overlay - black/blue tones */}
