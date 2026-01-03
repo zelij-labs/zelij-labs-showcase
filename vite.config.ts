@@ -10,12 +10,12 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  base: "/zelij-labs-showcase/",
+  base: mode === 'production' ? '/zelij-labs-showcase/' : '/',
   build: {
   rollupOptions: {
     input: {
       main: 'index.html',
-      notFound: 'public/404.html', // Ensure the path matches the actual location
+      // notFound: 'public/404.html', // Ensure the path matches the actual location
     },
   },
 },
