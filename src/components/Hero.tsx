@@ -43,9 +43,9 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
         style={{ 
           backgroundImage: `url(${circuitOverlay})`,
-          transform: `translateY(${scrollY * 0.15}px)`,
-          opacity: 0.5,
-          mixBlendMode: 'screen',
+          transform: `translateY(${scrollY * 0.15}px) scale(1.5)`,
+          opacity: 0.2,
+          mixBlendMode: 'overlay',
         }}
       />
       
