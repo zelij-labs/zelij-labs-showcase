@@ -43,8 +43,8 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
         style={{ 
           backgroundImage: `url(${circuitOverlay})`,
-          transform: `translateY(${scrollY * 0.15}px) scale(1.5)`,
-          opacity: 0.2,
+          transform: `translateY(${scrollY * 0.15}px) scale(1.3)`,
+          opacity: 0.35,
           mixBlendMode: 'overlay',
         }}
       />
@@ -61,11 +61,11 @@ export function Hero() {
           </h1>
         </div>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto">
           Engineering Intelligence into the Modern Stack.
         </p>
         
-        <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
+        <p className="text-base md:text-lg text-foreground/70 mb-12 max-w-xl mx-auto">
           We build autonomous AI agents, high-frequency data architectures, and the cloud infrastructure that powers them. Precision-crafted software for the frontier of automation.
         </p>
         
