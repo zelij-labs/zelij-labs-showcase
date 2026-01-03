@@ -11,6 +11,14 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   base: "/zelij-labs-showcase/",
+  build: {
+  rollupOptions: {
+    input: {
+      main: 'index.html',
+      notFound: 'public/404.html', // Ensure the path matches the actual location
+    },
+  },
+},
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
