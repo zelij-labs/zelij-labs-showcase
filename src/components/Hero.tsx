@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
+import { useEffect, useState } from "react";
 import logoDark from "@/assets/logo-dark.png";
 import logoLight from "@/assets/logo-light.png";
 import heroBg from "@/assets/hero-chicago-dark.jpg";
@@ -8,6 +9,13 @@ import circuitOverlay from "@/assets/hero-circuit-minimal.jpg";
 
 export function Hero() {
   const { theme } = useTheme();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   const scrollToContact = () => {
@@ -19,15 +27,21 @@ export function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Parallax */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{ 
+          backgroundImage: `url(${heroBg})`,
+          transform: `translateY(${scrollY * 0.3}px)`,
+        }}
       />
-      {/* Digital Circuit Pattern Overlay */}
+      {/* Digital Circuit Pattern Overlay with Parallax */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-overlay"
-        style={{ backgroundImage: `url(${circuitOverlay})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-screen"
+        style={{ 
+          backgroundImage: `url(${circuitOverlay})`,
+          transform: `translateY(${scrollY * 0.15}px)`,
+        }}
       />
       {/* Gradient Mesh Overlay - black/blue tones */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
