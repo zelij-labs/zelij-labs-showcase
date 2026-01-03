@@ -4,6 +4,7 @@ import { useTheme } from "./ThemeProvider";
 import logoDark from "@/assets/logo-dark.png";
 import logoLight from "@/assets/logo-light.png";
 import heroBg from "@/assets/hero-chicago-dark.jpg";
+import circuitOverlay from "@/assets/hero-circuit-minimal.jpg";
 
 export function Hero() {
   const { theme } = useTheme();
@@ -23,9 +24,14 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Gradient Mesh Overlay */}
+      {/* Digital Circuit Pattern Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-overlay"
+        style={{ backgroundImage: `url(${circuitOverlay})` }}
+      />
+      {/* Gradient Mesh Overlay - black/blue tones */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
       
       <div className="container mx-auto text-center relative z-10">
         <div className="mb-8 flex justify-center items-center gap-6">
