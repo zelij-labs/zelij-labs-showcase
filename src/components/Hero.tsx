@@ -1,21 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
-import { useEffect, useState } from "react";
 import logoDark from "@/assets/logo-dark.png";
 import logoLight from "@/assets/logo-light.png";
-import heroBg from "@/assets/hero-chicago-dark.jpg";
-import circuitOverlay from "@/assets/hero-circuit-minimal.jpg";
+import { GradientMesh } from "./GradientMesh";
+import neuralBg from "@/assets/hero-neural-bg.jpg";
 
 export function Hero() {
   const { theme } = useTheme();
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   const scrollToContact = () => {
@@ -27,32 +19,22 @@ export function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden bg-background">
-      {/* Background effects - only visible in dark mode */}
-      {isDark && (
-        <>
-          {/* Background Image with Parallax */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${heroBg})`,
-              transform: `translateY(${scrollY * 0.3}px)`,
-            }}
-          />
-          {/* Gradient Mesh Overlay - black/blue tones */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
-          {/* Digital Circuit Pattern Overlay - on top of gradients */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
-            style={{
-              backgroundImage: `url(${circuitOverlay})`,
-              transform: `translateY(${scrollY * 0.15}px) scale(1.3)`,
-              opacity: 0.35,
-              mixBlendMode: 'overlay',
-            }}
-          />
-        </>
-      )}
+      {/* Gradient Mesh Background - works in both light and dark mode */}
+      <GradientMesh />
+
+      {/* Subtle Neural Network Background */}
+      <div
+        className="absolute inset-0 mix-blend-overlay pointer-events-none"
+        style={{
+          backgroundImage: `url(${neuralBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: isDark
+            ? 'grayscale(100%) contrast(1.4)'
+            : 'grayscale(100%) contrast(1.4) invert(1)',
+          opacity: isDark ? 0.12 : 0.10,
+        }}
+      />
 
       <div className="container mx-auto text-center relative z-10">
         <div className="mb-8 flex justify-center items-center gap-6">
