@@ -26,29 +26,34 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
-      {/* Background Image with Parallax */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: `url(${heroBg})`,
-          transform: `translateY(${scrollY * 0.3}px)`,
-        }}
-      />
-      {/* Gradient Mesh Overlay - black/blue tones */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
-      {/* Digital Circuit Pattern Overlay - on top of gradients */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
-        style={{ 
-          backgroundImage: `url(${circuitOverlay})`,
-          transform: `translateY(${scrollY * 0.15}px) scale(1.3)`,
-          opacity: 0.35,
-          mixBlendMode: 'overlay',
-        }}
-      />
-      
+    <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden bg-background">
+      {/* Background effects - only visible in dark mode */}
+      {isDark && (
+        <>
+          {/* Background Image with Parallax */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${heroBg})`,
+              transform: `translateY(${scrollY * 0.3}px)`,
+            }}
+          />
+          {/* Gradient Mesh Overlay - black/blue tones */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
+          {/* Digital Circuit Pattern Overlay - on top of gradients */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
+            style={{
+              backgroundImage: `url(${circuitOverlay})`,
+              transform: `translateY(${scrollY * 0.15}px) scale(1.3)`,
+              opacity: 0.35,
+              mixBlendMode: 'overlay',
+            }}
+          />
+        </>
+      )}
+
       <div className="container mx-auto text-center relative z-10">
         <div className="mb-8 flex justify-center items-center gap-6">
           <img 

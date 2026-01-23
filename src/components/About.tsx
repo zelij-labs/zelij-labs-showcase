@@ -50,8 +50,8 @@ export function About() {
             </div>
           </div>
 
-          <Card className="border-accent/10 bg-[#0a0a0a] overflow-hidden shadow-2xl">
-            <div className="bg-muted/20 px-4 py-2 border-b border-white/5 flex gap-2">
+          <Card className="border-accent/10 bg-card overflow-hidden shadow-2xl">
+            <div className="bg-muted/20 px-4 py-2 border-b border-border flex gap-2">
               <div className="w-2 h-2 rounded-full bg-red-500/50" />
               <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
               <div className="w-2 h-2 rounded-full bg-green-500/50" />
@@ -65,13 +65,13 @@ export function About() {
                       <item.icon className="w-4 h-4" />
                       <span className="text-xs uppercase tracking-tighter font-bold">{item.label}</span>
                     </div>
-                    <div className="text-sm text-gray-300 pl-6 border-l border-white/10 italic">
+                    <div className="text-sm text-muted-foreground pl-6 border-l border-border italic">
                       {item.value}
                     </div>
                   </div>
                 ))}
-                
-                <div className="pt-4 mt-4 border-t border-white/5">
+
+                <div className="pt-4 mt-4 border-t border-border">
                   <div className="flex items-center justify-between text-[10px] uppercase text-muted-foreground">
                     <span>System Status</span>
                     <span className="text-green-500 animate-pulse">● Nominal</span>
