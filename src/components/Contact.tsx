@@ -100,7 +100,7 @@ export function Contact() {
                 </Button>
                 <div className="flex items-center justify-center gap-2 text-[9px] text-muted-foreground uppercase tracking-widest">
                   <ShieldCheck className="w-3 h-3" />
-                  <span>Encrypted Transmission | Response within 48h</span>
+                  <span>Architect Review | Response within 48h</span>
                 </div>
               </form>
             </CardContent>

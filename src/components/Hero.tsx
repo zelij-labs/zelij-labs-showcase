@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
+import { useEffect, useState } from "react";
 import logoDark from "@/assets/logo-dark.png";
 import logoLight from "@/assets/logo-light.png";
 import { GradientMesh } from "./GradientMesh";
@@ -9,6 +10,13 @@ import neuralBg from "@/assets/hero-neural-bg.jpg";
 export function Hero() {
   const { theme } = useTheme();
   const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
@@ -19,10 +27,17 @@ export function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden bg-background">
-      {/* Gradient Mesh Background - works in both light and dark mode */}
-      <GradientMesh />
+      {/* Gradient Mesh Background with parallax - works in both light and dark mode */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          transform: `translateY(${scrollY * 0.5}px)`,
+        }}
+      >
+        <GradientMesh />
+      </div>
 
-      {/* Subtle Neural Network Background */}
+      {/* Subtle Neural Network Background with parallax */}
       <div
         className="absolute inset-0 mix-blend-overlay pointer-events-none"
         style={{
@@ -33,6 +48,7 @@ export function Hero() {
             ? 'grayscale(100%) contrast(1.4)'
             : 'grayscale(100%) contrast(1.4) invert(1)',
           opacity: isDark ? 0.12 : 0.10,
+          transform: `translateY(${scrollY * 0.3}px)`,
         }}
       />
 
@@ -49,11 +65,11 @@ export function Hero() {
         </div>
         
         <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-          Engineering Clarity into the Modern Stack.
+          Applied Engineering for Business-Critical Systems.
         </p>
         
         <p className="text-base md:text-lg text-foreground/70 mb-12 max-w-xl mx-auto">
-          We are a specialized lab dedicated to building high-performance systems and intelligent automation. We bridge the gap between emerging technology and production-ready reality through rigorous, precision-led engineering.        </p>
+          We build high-performance systems and intelligent automation—bridging emerging technology with production-grade execution.</p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
