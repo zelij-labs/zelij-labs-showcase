@@ -53,13 +53,13 @@ export function Hero() {
       />
 
       <div className="container mx-auto text-center relative z-10">
-        <div className="mb-8 flex justify-center items-center gap-6">
-          <img 
-            src={isDark ? logoDark : logoLight} 
-            alt="Zelij Labs Logo" 
-            className="w-20 h-20 md:w-24 md:h-24" 
+        <div className="mb-8 flex justify-center items-center gap-4 md:gap-6">
+          <img
+            src={isDark ? logoDark : logoLight}
+            alt="Zelij Labs Logo"
+            className="w-16 h-16 md:w-24 md:h-24 flex-shrink-0"
           />
-          <h1 className="text-5xl md:text-7xl font-semibold font-montserrat text-foreground uppercase tracking-wide">
+          <h1 className="text-4xl md:text-7xl font-semibold font-montserrat text-foreground uppercase tracking-wide whitespace-nowrap">
             Zelij Labs
           </h1>
         </div>
